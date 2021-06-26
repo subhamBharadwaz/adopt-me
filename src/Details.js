@@ -45,8 +45,9 @@ class Details extends Component {
     } = this.state;
 
     return (
-      <div className="details">
+      <div className="">
         <Carousel images={images} />
+
         <div>
           <h1>{name}</h1>
           <h2>{`${animal} - ${breed} - ${city},${state}`}</h2>

@@ -4,7 +4,6 @@ export default class Carousel extends Component {
   state = {
     active: 0,
   };
-  
 
   static defaultProps = {
     images: ["http://pets-images.dev-apis.com/pets/none.jpg"],
@@ -21,9 +20,9 @@ export default class Carousel extends Component {
     const { images } = this.props;
 
     return (
-      <div className="carousel">
+      <div className="flex flex-wrap justify-between">
         <img src={images[active]} alt="animal" />
-        <div className="carousel-smaller">
+        <div className="rounded-bl-full grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 rounded-full">
           {images.map((photo, index) => (
             //eslint-disable-next-line
             <img
